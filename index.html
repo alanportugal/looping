@@ -26,7 +26,7 @@
   <h1 id="colorMe">Whee!</h1>
   
   <img id="roller" src="" alt="roller coaster">
-  <br />The total number of loops performed: <div id="total-loops"></div>
+  <br />*Loops performed (Qty entered x 2):<div id="total-loops"></div>
   
   <script type="text/javascript">
     // Description:
@@ -59,31 +59,35 @@
     while(counter <= howMany*theXfactor){
 
       console.log("Wheee! This is the ", counter, " time we've done this!");
-      
+
       // find value of counter modulo length of sources array-
       // this value will increase by one on each iteration of the loop,
       // so image source will cycle through all possible images
       var theOne = counter % imageSources.length;
-      
+
       // reset the src of the image to the next member of the sources array
       theImg.setAttribute("src", imageSources[theOne]);
-      
+
       // TODO: increment the counter
       counter = counter + 1;
+
+      // Delay by 3 seconds
+      //sleep(3000);
     }
-      //This wil store the number of loops performed, which will be displayed in the matching ID tag.
-      document.getElementById('total-loops').innerHTML = counter-1;
-      
-      // EXTRA CHALLENGES:
-      // 1. Using JS, add a class of "red" to the <h1>.
-      //    This only needs to be done once, so code should be outside loop. 
-      document.getElementById("colorMe").style.color = "red";
-    
-      // 2. Execute the loop only half as many times, or twice as many times, as the user requested.
-      // - Multiplied howMany variable by the 'theXfactor'.
-    
-      // 3. Add a pause to each loop, so user can see each image as it cycles past.
-      //    This is a difficult one!
+
+    //This wil store the number of loops performed, which will be displayed in the matching ID tag.
+    document.getElementById('total-loops').innerHTML = counter-1;
+
+    // EXTRA CHALLENGES:
+    // 1. Using JS, add a class of "red" to the <h1>.
+    //    This only needs to be done once, so code should be outside loop. 
+    document.getElementById("colorMe").style.color = "red";
+
+    // 2. Execute the loop only half as many times, or twice as many times, as the user requested.
+    // - Multiplied howMany variable by the 'theXfactor'.
+
+    // 3. Add a pause to each loop, so user can see each image as it cycles past.
+    //    This is a difficult one!
   </script>
 </body>
   
