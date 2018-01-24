@@ -44,10 +44,12 @@
     theImg.setAttribute("src", imageSources[0]);
     
     // TODO: set howMany variable to a value user inputs
-    var howMany    var counter = 1;
+    var howMany = prompt("How many loops do you want?")
+    var counter = 1;
     
     // TODO: execute this loop the number of times user requested
-    while(false){
+    while(counter <= howMany){
+
       console.log("Wheee! This is the ", counter, " time we've done this!");
       
       // find value of counter modulo length of sources array-
@@ -58,7 +60,9 @@
       // reset the src of the image to the next member of the sources array
       theImg.setAttribute("src", imageSources[theOne]);
       
-      // TODO: increment the counter    }
+      // TODO: increment the counter
+      counter = counter + 1;
+    }
       
       // EXTRA CHALLENGES:
       // 1. Using JS, add a class of "red" to the <h1>.
