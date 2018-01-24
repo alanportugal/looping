@@ -26,6 +26,7 @@
   <h1 id="colorMe">Whee!</h1>
   
   <img id="roller" src="" alt="roller coaster">
+  <br />The total number of loops performed: <div id="total-loops"></div>
   
   <script type="text/javascript">
     // Description:
@@ -70,6 +71,8 @@
       // TODO: increment the counter
       counter = counter + 1;
     }
+      //This wil store the number of loops performed, which will be displayed in the matching ID tag.
+      document.getElementById('total-loops').innerHTML = counter-1;
       
       // EXTRA CHALLENGES:
       // 1. Using JS, add a class of "red" to the <h1>.
